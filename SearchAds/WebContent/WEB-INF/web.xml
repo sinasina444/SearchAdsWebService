@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<display-name>SearchAds</display-name>
+<welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+</welcome-file-list>
+
+<context-param>
+<param-name>adsDataFilePath</param-name>
+<param-value>/Users/jiayangan/project/SearchAds/data/crawled/ads_0502.txt</param-value>
+</context-param>
+
+<context-param>
+<param-name>budgetDataFilePath</param-name>
+<param-value>/Users/jiayangan/project/SearchAds/data/deduped/budget.txt</param-value>
+</context-param>
+
+<context-param>
+<param-name>uiTemplateFilePath</param-name>
+<param-value>/Users/jiayangan/project/SearchAds/ui.html</param-value>
+</context-param>
+
+<context-param>
+<param-name>adTemplateFilePath</param-name>
+<param-value>/Users/jiayangan/project/SearchAds/item.html</param-value>
+</context-param>
+
+<context-param>
+<param-name>memcachedServer</param-name>
+<param-value>127.0.0.1</param-value>
+</context-param>
+
+<context-param>
+<param-name>memcachedPortal</param-name>
+<param-value>11211</param-value>
+</context-param>
+
+<context-param>
+<param-name>mysqlHost</param-name>
+<param-value>127.0.0.1:3306</param-value>
+</context-param>
+
+<context-param>
+<param-name>mysqlDB</param-name>
+<param-value>searchads</param-value>
+</context-param>
+
+<context-param>
+<param-name>mysqlUser</param-name>
+<param-value>root</param-value>
+</context-param>
+
+<context-param>
+<param-name>mysqlPass</param-name>
+<param-value>bittiger2017</param-value>
+</context-param>
+
+<servlet>
+    <servlet-name>SearchAds</servlet-name>
+    <servlet-class>io.bittiger.ads.SearchAds</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SearchAds</servlet-name>
+    <url-pattern>/SearchAds</url-pattern>
+</servlet-mapping>
+
+</web-app>
